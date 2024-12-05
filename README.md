@@ -337,10 +337,15 @@ np.save('Asian_African-American.npy', direction)
 
 Asian - African-American
 
-[[out (19).mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/e6f6d854-0306-4b25-b13d-e5848e491185/f6317f3c-6fb1-40c8-8ad5-fedd3f32f9f0/out_(19).mp4)](https://github.com/user-attachments/assets/60858e10-5bd9-4460-accf-85a9204f17e5)
+https://github.com/user-attachments/assets/4957cd6f-a033-4208-a382-3ed838925297
 
 Caucasian - African-American
 
-[out (21).mp4](https://prod-files-secure.s3.us-west-2.amazonaws.com/e6f6d854-0306-4b25-b13d-e5848e491185/67b0995e-72aa-4b7b-97c3-4ff74a3cb20e/out_(21).mp4)
+https://github.com/user-attachments/assets/fa7ef730-7d97-4a78-9f1f-5375a54cdbd5
 
 Caucasian - African-American
+
+https://github.com/user-attachments/assets/1c02eb3c-6b4b-475c-b780-8c5e7e673847
+
+
+
