@@ -295,7 +295,7 @@ np.save('Asian_African-American.npy', direction)
 
 1. Stiching Tuning
     
-    ![스크린샷 2024-11-08 14.09.07.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e6f6d854-0306-4b25-b13d-e5848e491185/64ff6c01-e2f6-44d4-94ab-a5ff5e325d14/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-11-08_14.09.07.png)
+    <img width="445" alt="1" src="https://github.com/user-attachments/assets/4d2fb1b3-3fbe-4b15-abe0-661cc2cfb7bc">
     
     generator로 생성된 이미지가 w_direction으로 edit된 이미지, 얼굴 주변의 이미지와의 Loss가 최소가 되도록 학습하여 이미지를 생성한다. 
     
