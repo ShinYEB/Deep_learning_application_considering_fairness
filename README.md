@@ -252,7 +252,7 @@ from configs import paths_config
 from argparse import Namespace
 from torchvision import transforms
 from torch.utils.data import DataLoader
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import SGDClassifier
 import numpy as np
 import torch
 import torchvision
@@ -280,17 +280,27 @@ opts = Namespace(**opts)
 
 encoder = Encoder4Editing(num_layers=50, mode='ir_se', opts=opts).to(device)
 
-model = LogisticRegression(class_weight='balanced')
+model = SGDClassifier(
+    loss="log_loss",  # Logistic Regression을 위한 손실 함수
+    penalty="elasticnet",
+    l1_ratio=0.1,
+    max_iter=1,  # 각 배치에서 1번의 에포크
+    warm_start=True  # 이전 상태를 유지하며 학습
+)
 
-for epoch in range(epochs):
-		for src, tgt in tqdm(dataLoader):
-		    out = encoder(src).reshape(batch_size, -1).detach().numpy()
+classes = np.unique([0, 1])
+
+for epoch in range(5):
+    for src, tgt in tqdm(dataLoader):
+        
+        out = encoder(src).reshape(batch_size, -1).detach().numpy()
         tgt = tgt.detach().numpy()
-    
-        model.fit(out, tgt)
+
+        model.partial_fit(out, tgt, classes=classes)
+            
 
 direction = model.coef_.reshape(18, 512)
-np.save('Asian_African-American.npy', direction)
+np.save(f'w_direction.npy', direction)
 ```
 
 1. Stiching Tuning
